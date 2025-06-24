@@ -13,20 +13,6 @@ thermostat::~thermostat()
 }
 void thermostat::displaySttatus() const
 {
-  if (mode == 0)
-  {
-    std::cout << "location : " << location << " Temperature : " << temprature << " C Mode : OFF" << std::endl;
-  }
-  else if (mode == 1)
-  {
-    std::cout << "location : " << location << " Temperature : " << temprature << " C Mode : COOLING" << std::endl;
-  }
-  else if (mode == 1)
-  {
-    std::cout << "location : " << location << " Temperature : " << temprature << " C Mode : HEATINg" << std::endl;
-  }
-  else
-  {
-    std::cout << "Incorrect mode" << std::endl;
-  }
+  std::cout << "location : " << location << " Temperature : " << temprature << " C Mode : " << ((mode == 0)?  "OFF" : ((mode == 1 )? "COOLING" : "HEATING"))  << std::endl;
+  
 }
