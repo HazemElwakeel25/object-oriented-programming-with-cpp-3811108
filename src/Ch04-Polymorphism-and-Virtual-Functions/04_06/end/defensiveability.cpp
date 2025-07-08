@@ -2,7 +2,7 @@
 
 DefensiveAbility::DefensiveAbility(const std::string &name, int protection)
     // TODO: Initialize base class
-    : protectionAmount(protection)
+    : Ability(name), protectionAmount(protection)
 {
 }
 
@@ -12,4 +12,13 @@ DefensiveAbility::~DefensiveAbility()
 }
 
 // TODO: Override use()
+
+void DefensiveAbility::use() const
+{
+    std::cout << abilityName << " Is used and defend for " << (protectionAmount) << std::endl;
+}
 // TODO: Override describe()
+void DefensiveAbility::describe() const
+{
+    std::cout << "Defensive Ability: " << abilityName << std::endl;
+}
